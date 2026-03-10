@@ -39,7 +39,9 @@
       "Bash(git rm:*)",
       "Bash(git commit:*)",
       "Bash(git remote:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npx next:*)",
+      "Bash(npx tsc:*)"
     ],
     "additionalDirectories": [
       "/Users/markusalehtisalo/Downloads/playground/src/app/aiven/resource-center/[slug]",

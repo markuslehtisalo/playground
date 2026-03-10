@@ -11,7 +11,7 @@ export function WizardShell() {
   const [state, dispatch] = useReducer(wizardReducer, INITIAL_STATE);
 
   return (
-    <div className="grid h-screen grid-rows-[56px_auto_1fr] lg:grid-rows-[56px_1fr] grid-cols-1 lg:grid-cols-[320px_1fr]">
+    <div className="grid h-dvh grid-rows-[56px_auto_1fr] lg:grid-rows-[56px_1fr] grid-cols-1 lg:grid-cols-[320px_1fr]">
       <div className="col-span-full">
         <WizardHeader />
       </div>

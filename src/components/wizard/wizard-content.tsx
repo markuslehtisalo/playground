@@ -155,8 +155,8 @@ export function WizardContent({ state, dispatch }: WizardContentProps) {
   return (
     <main className="flex h-full flex-col overflow-y-auto bg-background">
       <div className={cn(
-        "flex-1 p-6 lg:p-8",
-        (state.isLaunching || state.isLaunched) && "flex items-center justify-center",
+        "flex-1 p-6 pb-24 sm:pb-6 lg:p-8",
+        (state.isLaunching || state.isLaunched) && "flex items-start justify-center pt-[20vh] sm:items-center sm:pt-0",
       )}>
         {!state.isLaunching && !state.isLaunched && (
           <div className="mb-6">
@@ -187,7 +187,7 @@ export function WizardContent({ state, dispatch }: WizardContentProps) {
       </div>
 
       {!state.isLaunched && !state.isLaunching && (
-        <div className="sticky bottom-0 border-t border-aiven-grey-10 bg-white dark:border-aiven-grey-80 dark:bg-aiven-grey-100">
+        <div className="fixed bottom-0 left-0 right-0 z-10 sm:sticky sm:bottom-0 border-t border-aiven-grey-10 bg-white dark:border-aiven-grey-80 dark:bg-aiven-grey-100">
           <AnimatePresence>
             {errors.length > 0 && (
               <motion.div

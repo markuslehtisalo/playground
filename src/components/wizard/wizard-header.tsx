@@ -21,7 +21,7 @@ export function WizardHeader() {
         Create New Service
       </h1>
 
-      <div className="w-40 flex items-center justify-end">
+      <div className="flex items-center justify-end sm:w-40">
         <DarkModeToggle />
       </div>
     </header>

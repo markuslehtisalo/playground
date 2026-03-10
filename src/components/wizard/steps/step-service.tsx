@@ -80,15 +80,32 @@ export function StepService({ state, dispatch }: StepProps) {
           onValueChange={(val) => setFilter(val as ServiceCategory)}
         >
           <Select.Trigger aria-label="Filter services">
-            <Select.Value />
+            <span className="flex items-center gap-1.5 capitalize">
+              {(() => {
+                const sel = CATEGORIES.find((c) => c.value === filter);
+                const Icon = sel?.icon ?? IconApps;
+                return (
+                  <>
+                    <Icon size={14} />
+                    {sel?.label ?? "All"}
+                  </>
+                );
+              })()}
+            </span>
           </Select.Trigger>
           <Select.Portal>
             <Select.Popup>
-              {CATEGORIES.map((cat) => (
-                <Select.Item key={cat.value} value={cat.value}>
-                  {cat.label}
-                </Select.Item>
-              ))}
+              {CATEGORIES.map((cat) => {
+                const CatIcon = cat.icon;
+                return (
+                  <Select.Item key={cat.value} value={cat.value}>
+                    <span className="flex items-center gap-1.5">
+                      <CatIcon size={14} />
+                      {cat.label}
+                    </span>
+                  </Select.Item>
+                );
+              })}
             </Select.Popup>
           </Select.Portal>
         </Select>
