@@ -36,7 +36,10 @@
       "Bash(git -C /Users/markusalehtisalo/Downloads/playground log --all --full-history -- \".env*\")",
       "Bash(git -C /Users/markusalehtisalo/Downloads/playground check-ignore -v .env.local)",
       "Bash(git add:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)"
     ],
     "additionalDirectories": [
       "/Users/markusalehtisalo/Downloads/playground/src/app/aiven/resource-center/[slug]",

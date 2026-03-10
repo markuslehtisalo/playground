@@ -47,7 +47,7 @@ function DialogPopup({
   return (
     <BaseDialog.Popup
       className={cn(
-        "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md rounded-lg border border-aiven-grey-10 bg-white p-6 shadow-xl outline-none",
+        "fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[calc(100%-2.5rem)] rounded-lg border border-aiven-grey-10 bg-white p-6 shadow-xl outline-none sm:max-w-md",
         "dark:border-aiven-grey-80 dark:bg-aiven-grey-100",
         "transition-[opacity,transform] duration-200",
         "data-[starting-style]:scale-95 data-[starting-style]:opacity-0",

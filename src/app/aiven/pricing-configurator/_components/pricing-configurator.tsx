@@ -179,7 +179,7 @@ export function PricingConfigurator() {
               width={24}
               height={24}
             />
-            Aiven Price Configurator
+            Aiven Configurator
           </h1>
           <div className="flex flex-1 justify-end">
             <DarkModeToggle />
@@ -260,7 +260,7 @@ export function PricingConfigurator() {
             }
           />
           <div className="mt-4 grid grid-cols-1 items-center sm:grid-cols-3">
-            <div>
+            <div className="hidden sm:block">
               <CompareDrawer
                 serviceId={state.serviceId}
                 selectedTier={state.selectedTier}

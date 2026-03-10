@@ -32,7 +32,7 @@ export function MarketingComposition() {
             <IconRocket size={18} />
             Start free trial
           </Button>
-          <Button variant="ghost" size="lg">
+          <Button variant="ghost" size="lg" className="hidden sm:inline-flex">
             View pricing
           </Button>
         </div>

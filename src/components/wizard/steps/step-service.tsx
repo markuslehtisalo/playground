@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ToggleGroup } from "@/components/aiven";
+import { Select, ToggleGroup } from "@/components/aiven";
 import {
   IconSql,
   IconBrandMysql,
@@ -73,23 +73,46 @@ export function StepService({ state, dispatch }: StepProps) {
 
   return (
     <div className="space-y-6">
-      <ToggleGroup
-        value={[filter]}
-        onValueChange={(values) => {
-          const next = values[values.length - 1] as ServiceCategory | undefined;
-          setFilter(next ?? "all");
-        }}
-      >
-        {CATEGORIES.map((cat) => {
-          const CatIcon = cat.icon;
-          return (
-            <ToggleGroup.Item key={cat.value} value={cat.value} className="gap-1.5">
-              <CatIcon size={14} />
-              {cat.label}
-            </ToggleGroup.Item>
-          );
-        })}
-      </ToggleGroup>
+      {/* Mobile: dropdown */}
+      <div className="sm:hidden">
+        <Select
+          value={filter}
+          onValueChange={(val) => setFilter(val as ServiceCategory)}
+        >
+          <Select.Trigger aria-label="Filter services">
+            <Select.Value />
+          </Select.Trigger>
+          <Select.Portal>
+            <Select.Popup>
+              {CATEGORIES.map((cat) => (
+                <Select.Item key={cat.value} value={cat.value}>
+                  {cat.label}
+                </Select.Item>
+              ))}
+            </Select.Popup>
+          </Select.Portal>
+        </Select>
+      </div>
+      {/* Desktop: toggle group */}
+      <div className="hidden sm:block">
+        <ToggleGroup
+          value={[filter]}
+          onValueChange={(values) => {
+            const next = values[values.length - 1] as ServiceCategory | undefined;
+            setFilter(next ?? "all");
+          }}
+        >
+          {CATEGORIES.map((cat) => {
+            const CatIcon = cat.icon;
+            return (
+              <ToggleGroup.Item key={cat.value} value={cat.value} className="gap-1.5">
+                <CatIcon size={14} />
+                {cat.label}
+              </ToggleGroup.Item>
+            );
+          })}
+        </ToggleGroup>
+      </div>
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {filtered.map((service) => {

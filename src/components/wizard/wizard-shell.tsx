@@ -28,7 +28,7 @@ export function WizardShell() {
         />
       </div>
 
-      <div className="overflow-y-auto">
+      <div className="min-h-0">
         <WizardContent state={state} dispatch={dispatch} />
       </div>
     </div>

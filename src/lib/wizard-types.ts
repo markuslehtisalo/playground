@@ -96,7 +96,7 @@ export const STEP_ORDER: WizardStep[] = [
 export type WizardDispatch = React.ActionDispatch<[action: WizardAction]>;
 
 export const STEP_LABELS: Record<WizardStep, string> = {
-  service: "Service",
+  service: "Select a Service",
   cloud: "Cloud & Region",
   plan: "Plan",
   configure: "Configure",

@@ -88,14 +88,16 @@ export default function DesignSystemPage() {
           innerClassName="max-w-6xl"
           padding="pt-6 pb-20"
         >
-          <div className="flex items-center justify-between">
-            <Link
-              className="inline-flex items-center gap-1.5 rounded-sm text-sm text-text-muted outline-none transition-colors hover:text-aiven-grey-60 focus-visible:outline-2 focus-visible:outline-aiven-primary-80 focus-visible:outline-offset-2 dark:hover:text-aiven-grey-20"
-              href="/aiven"
-            >
-              <IconArrowLeft size={14} />
-              Back
-            </Link>
+          <div className="flex items-center">
+            <div className="flex-1">
+              <Link
+                className="inline-flex items-center gap-1.5 rounded-sm text-sm text-text-muted outline-none transition-colors hover:text-aiven-grey-60 focus-visible:outline-2 focus-visible:outline-aiven-primary-80 focus-visible:outline-offset-2 dark:hover:text-aiven-grey-20"
+                href="/aiven"
+              >
+                <IconArrowLeft size={14} />
+                Back
+              </Link>
+            </div>
             <div className="flex items-center gap-2 text-sm font-semibold text-text-heading translate-y-0.5">
               <Image
                 src="/aiven-logo.png"
@@ -105,7 +107,9 @@ export default function DesignSystemPage() {
               />
               Aiven
             </div>
-            <DarkModeToggle />
+            <div className="flex flex-1 justify-end">
+              <DarkModeToggle />
+            </div>
           </div>
 
           <div className="flex flex-1 flex-col items-center justify-center text-center">

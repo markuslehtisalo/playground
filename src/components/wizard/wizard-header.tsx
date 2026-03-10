@@ -17,7 +17,7 @@ export function WizardHeader() {
         </Link>
       </div>
 
-      <h1 className="flex-1 text-center text-sm font-semibold text-text-heading">
+      <h1 className="hidden flex-1 text-center text-sm font-semibold text-text-heading sm:block">
         Create New Service
       </h1>
 

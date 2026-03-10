@@ -107,7 +107,7 @@ export function Rail({
           {icon && <span className="ml-0.5 text-aiven-grey-30">{icon}</span>}
           <h2 className="text-lg font-semibold text-aiven-grey-0">
             {title}{" "}
-            <span className="text-aiven-grey-40 font-normal">({resources.length})</span>
+            <span className="hidden text-aiven-grey-40 font-normal sm:inline">({resources.length})</span>
           </h2>
         </div>
         {description && (

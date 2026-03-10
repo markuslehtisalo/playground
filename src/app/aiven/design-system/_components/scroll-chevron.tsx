@@ -15,7 +15,7 @@ export function ScrollChevron() {
 
   return (
     <motion.button
-      className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2 cursor-pointer rounded-full p-1 outline-none transition-colors hover:text-aiven-grey-60 focus-visible:outline-2 focus-visible:outline-aiven-primary-80 focus-visible:outline-offset-2"
+      className="absolute bottom-8 left-1/2 z-10 hidden -translate-x-1/2 cursor-pointer rounded-full p-1 outline-none transition-colors hover:text-aiven-grey-60 focus-visible:outline-2 focus-visible:outline-aiven-primary-80 focus-visible:outline-offset-2 sm:block"
       initial={prefersReducedMotion ? false : { opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2, duration: prefersReducedMotion ? 0 : 0.6 }}
