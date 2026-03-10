@@ -26,7 +26,7 @@ export function CloudRegionSelect({
       <h2 className="text-sm font-semibold text-text-heading">
         Tailor your plan
       </h2>
-      <div className="grid grid-cols-1 gap-3 sm:w-56">
+      <div className="grid grid-cols-2 gap-3 sm:w-auto sm:grid-cols-[14rem_14rem]">
       <div className="space-y-1.5">
         <span className="text-xs font-medium uppercase tracking-wider text-text-muted">
           Cloud

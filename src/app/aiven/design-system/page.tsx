@@ -112,7 +112,7 @@ export default function DesignSystemPage() {
             </div>
           </div>
 
-          <div className="flex flex-1 flex-col items-center justify-center text-center">
+          <div className="flex flex-1 flex-col items-center justify-center pt-12 text-center sm:pt-0">
             <StaggerContainer className="flex flex-col items-center space-y-8" stagger={0.12}>
               <StaggerItem>
                 <SectionHeading

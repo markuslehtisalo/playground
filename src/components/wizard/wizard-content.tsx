@@ -156,7 +156,9 @@ export function WizardContent({ state, dispatch }: WizardContentProps) {
     <main className="flex h-full flex-col overflow-y-auto bg-background">
       <div className={cn(
         "flex-1 p-6 pb-24 sm:pb-6 lg:p-8",
-        (state.isLaunching || state.isLaunched) && "flex items-start justify-center pt-[20vh] sm:items-center sm:pt-0",
+        (state.isLaunching || state.isLaunched) && "flex items-start justify-center sm:items-center sm:pt-0",
+        state.isLaunching && !state.isLaunched && "pt-[25vh]",
+        state.isLaunched && "pt-[20vh]",
       )}>
         {!state.isLaunching && !state.isLaunched && (
           <div className="mb-6">
@@ -201,7 +203,7 @@ export function WizardContent({ state, dispatch }: WizardContentProps) {
                   {errors.map((error) => (
                     <div
                       key={error}
-                      className="flex items-center gap-2 text-sm text-aiven-error-60 dark:text-aiven-error-30"
+                      className="flex items-center gap-2 text-sm text-white"
                     >
                       <IconAlertCircle size={14} className="shrink-0" />
                       {error}

@@ -334,13 +334,13 @@ export const FREE_TIER_SPECS: Record<ServiceId, { vm: string; cpu: string; ram: 
 export const CLOUD_PROVIDERS: CloudProviderDefinition[] = [
   {
     id: "aws",
-    label: "Amazon Web Services",
+    label: "AWS",
     icon: IconBrandAws,
     regions: [
       { id: "aws-us-east-1", label: "US East (Virginia)", flag: "🇺🇸" },
       { id: "aws-us-west-2", label: "US West (Oregon)", flag: "🇺🇸" },
       { id: "aws-eu-west-1", label: "Europe (Ireland)", flag: "🇮🇪" },
-      { id: "aws-ap-southeast-1", label: "Asia Pacific (Singapore)", flag: "🇸🇬" },
+      { id: "aws-ap-southeast-1", label: "Asia (Singapore)", flag: "🇸🇬" },
     ],
   },
   {
