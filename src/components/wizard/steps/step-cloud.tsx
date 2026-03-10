@@ -56,7 +56,7 @@ export function StepCloud({ state, dispatch }: StepProps) {
           <button
             type="button"
             onClick={() => setProviderOpen(true)}
-            className="flex w-full items-center justify-between rounded-lg border border-aiven-grey-10 bg-white px-4 py-3 text-left outline-none focus-visible:outline-2 focus-visible:outline-aiven-primary-80 focus-visible:outline-offset-2 dark:border-aiven-grey-80 dark:bg-aiven-grey-100 sm:hidden"
+            className="flex h-10 w-full items-center justify-between rounded-md border border-aiven-grey-10 bg-white px-4 text-left outline-none focus-visible:outline-2 focus-visible:outline-aiven-primary-80 focus-visible:outline-offset-2 dark:border-aiven-grey-80 dark:bg-aiven-grey-100 sm:hidden"
           >
             <div className="flex items-center gap-2.5">
               {(() => {

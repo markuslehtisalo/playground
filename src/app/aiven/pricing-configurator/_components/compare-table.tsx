@@ -30,14 +30,14 @@ export function CompareDrawer({
       <Dialog.Trigger render={children} />
       <Dialog.Portal>
         <Dialog.Backdrop />
-        <Dialog.Popup className="fixed inset-y-0 right-0 left-auto top-0 w-full max-w-4xl translate-x-0 translate-y-0 rounded-none rounded-l-xl border-l border-aiven-grey-10 p-0 transition-[opacity,transform] duration-300 data-ending-style:translate-x-full data-starting-style:translate-x-full dark:border-aiven-grey-80">
+        <Dialog.Popup className="fixed inset-y-0 right-0 left-auto top-0 w-fit max-w-[calc(100%-2.5rem)] translate-x-0 translate-y-0 rounded-none rounded-l-xl border-l border-aiven-grey-10 p-0 transition-[opacity,transform] duration-300 data-ending-style:translate-x-full data-starting-style:translate-x-full sm:max-w-none dark:border-aiven-grey-80">
           <div className="flex h-full flex-col">
             <div className="flex items-center justify-between border-b border-aiven-grey-10 px-6 py-4 dark:border-aiven-grey-80">
               <Dialog.Title>Compare plans</Dialog.Title>
               <Dialog.Close />
             </div>
-            <div className="flex-1 overflow-y-auto px-6 py-4">
-              <table className="w-full text-sm [&_td]:whitespace-nowrap [&_th]:whitespace-nowrap" aria-label="Plan feature comparison">
+            <div className="flex-1 overflow-auto px-6 py-4">
+              <table className="text-sm [&_td]:whitespace-nowrap [&_th]:whitespace-nowrap" aria-label="Plan feature comparison">
                 <thead>
                   <tr className="border-b border-aiven-grey-10 dark:border-aiven-grey-80">
                     <th scope="col" className="sticky left-0 bg-white px-3 py-2 text-left font-medium text-text-muted dark:bg-aiven-grey-100">

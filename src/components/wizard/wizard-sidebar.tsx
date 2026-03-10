@@ -138,7 +138,7 @@ export function WizardSidebar({ state, onGoToStep }: WizardSidebarProps) {
                     <div className="relative z-10 flex items-center gap-3">
                       <StepCircle
                         index={idx}
-                        isActive={isActive}
+                        isActive={isActive && !state.isLaunched}
                         isCompleted={isCompleted}
                       />
                       <div className="flex-1 min-w-0">
@@ -183,12 +183,15 @@ export function WizardSidebar({ state, onGoToStep }: WizardSidebarProps) {
           <div className="flex items-center gap-3 px-2 py-2.5">
             <div className="relative z-10 flex items-center gap-3">
               <div className={cn(
-                "flex size-6 shrink-0 items-center justify-center rounded-full transition-colors",
+                "relative flex size-6 shrink-0 items-center justify-center rounded-full transition-colors",
                 state.isLaunched
                   ? "bg-aiven-success-60 text-white dark:bg-aiven-success-40"
                   : "border-2 border-aiven-grey-20 bg-white text-aiven-grey-40 dark:border-aiven-grey-60 dark:bg-aiven-grey-100 dark:text-aiven-grey-40",
               )}>
                 <IconRocket size={12} />
+                {state.isLaunched && (
+                  <span aria-hidden="true" className="absolute inset-0 rounded-full border-2 border-aiven-success-60/40 motion-safe:animate-ping dark:border-aiven-success-40/40" />
+                )}
               </div>
               <span className={cn(
                 "text-sm font-medium",
