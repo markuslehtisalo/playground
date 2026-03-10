@@ -216,7 +216,7 @@ export function WizardContent({ state, dispatch }: WizardContentProps) {
             <div className="flex items-center gap-3">
               {!isFirst && (
                 <Tooltip content="Esc">
-                  <Button variant="ghost" onClick={handlePrev}>
+                  <Button variant="ghost" className="-ml-4" onClick={handlePrev}>
                     <IconArrowLeft size={16} />
                     Back
                   </Button>

@@ -61,12 +61,10 @@ export function WizardMobileBar({ state, onGoToStep }: WizardMobileBarProps) {
           </div>
         </button>
 
-        {state.plan ? (
+        {state.plan && (
           <span className="text-sm font-semibold text-text-heading tabular-nums">
             ${cost === 0 ? "0" : <AnimatedNumber value={cost} />}/mo
           </span>
-        ) : (
-          <span className="text-xs text-text-muted">—</span>
         )}
       </div>
 

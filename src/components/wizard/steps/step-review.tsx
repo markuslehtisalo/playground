@@ -98,7 +98,7 @@ export function StepReview({ state, dispatch }: StepProps) {
 
   if (state.isLaunching) {
     return (
-      <div>
+      <div className="sm:mt-8">
         <div className="max-w-md text-center">
           <IconRocket
             size={32}
