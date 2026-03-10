@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \":*)",
+      "Bash(npm run lint)",
+      "WebFetch(domain:www.npmjs.com)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm ls next-themes)",
+      "Bash(npm install next-themes)",
+      "Bash(npm install next-sanity @sanity/image-url @anthropic-ai/sdk)",
+      "Bash(ls /Users/markusalehtisalo/Downloads/playground/.env*)",
+      "Bash(grep -E \"\\\\.\\(tsx|ts\\)$\")",
+      "Read(//Users/markusalehtisalo/Downloads/**)",
+      "Bash(npm install)",
+      "Bash(npx sanity debug --secrets)",
+      "Bash(SANITY_PROJECT_ID=fxj8y13r SANITY_DATASET=production SANITY_TOKEN=skuykdVHUXoJyhW2TVXJW7kWorhYZRoEecnmgHyxmTabbNsUddGnczttyU5skdHRaGpn9uXNq3xRxOHaPiYOq8SLeHiLhMAIaGpnPCQkJoHGD6rw0d74BKWgJLY73ZSYoY9EKjdWyMCiSPvDLeC9sK52LbiF0MehqRSD4bffMMMnokFIhIy5 node scripts/seed-sanity.mjs)",
+      "Bash(npm run dev)",
+      "Bash(node -e \"const icons = require\\(''@tabler/icons-react''\\); const names = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\(''digital''\\)\\); console.log\\(names\\);\")",
+      "Bash(node -e \"const icons = require\\(''@tabler/icons-react''\\); console.log\\(''aws:'', !!icons.IconBrandAws\\); console.log\\(''gcp:'', !!icons.IconBrandGoogleCloud\\); console.log\\(''azure:'', !!icons.IconBrandAzure\\); console.log\\(''cloud:'', !!icons.IconCloud\\); console.log\\(''droplet:'', !!icons.IconDroplet\\); console.log\\(''search:'', !!icons.IconSearch\\); console.log\\(''bolt:'', !!icons.IconBolt\\); console.log\\(''brandOpenSource:'', !!icons.IconBrandOpenSource\\);\")",
+      "Bash(node -e 'const icons = require\\(\"\"@tabler/icons-react\"\"\\); console.log\\(\"\"aws:\"\", \"\"IconBrandAws\"\" in icons\\); console.log\\(\"\"gcp:\"\", \"\"IconBrandGoogleCloud\"\" in icons\\); console.log\\(\"\"azure:\"\", \"\"IconBrandAzure\"\" in icons\\); console.log\\(\"\"cloud:\"\", \"\"IconCloud\"\" in icons\\); console.log\\(\"\"droplet:\"\", \"\"IconDroplet\"\" in icons\\); console.log\\(\"\"search:\"\", \"\"IconSearch\"\" in icons\\); console.log\\(\"\"bolt:\"\", \"\"IconBolt\"\" in icons\\); console.log\\(\"\"brandOpenSource:\"\", \"\"IconBrandOpenSource\"\" in icons\\);')",
+      "Bash(node -e 'const icons = require\\(\"\"@tabler/icons-react\"\"\\); const names = Object.keys\\(icons\\).filter\\(k => k.toLowerCase\\(\\).includes\\(\"\"google\"\"\\)\\); console.log\\(names\\);')",
+      "Bash(npx tsc --noEmit)",
+      "Read(//Users/markusalehtisalo/.claude/skills/vercel-react-best-practices/**)",
+      "Read(//Users/markusalehtisalo/.agents/skills/vercel-react-best-practices/**)",
+      "Bash(grep -E \"\\\\.\\(ts|tsx|json|const\\)$\")",
+      "Bash(wc -l /Users/markusalehtisalo/Downloads/playground/src/components/aiven/*.tsx /Users/markusalehtisalo/Downloads/playground/src/components/aiven/*.ts)",
+      "Bash(npx eslint:*)",
+      "Bash(grep -r \"aria-labelledby\\\\|aria-label\\\\|htmlFor\" /Users/markusalehtisalo/Downloads/playground/src/components/aiven/ --include=*.tsx)",
+      "Bash(find /Users/markusalehtisalo/Downloads/playground -name *.test.* -o -name *.spec.*)",
+      "Bash(grep -n \"contentTypeGradients\" /Users/markusalehtisalo/Downloads/playground/src/app/aiven/resource-center/[slug]/_components/detail-hero.tsx)",
+      "Bash(ls -la /Users/markusalehtisalo/Downloads/playground/src/app/aiven/resource-center/[slug]/_components/)",
+      "Bash(find /Users/markusalehtisalo/Downloads/playground/src/components/wizard -type f -name *.tsx -o -name *.ts -o -name *.css)",
+      "Bash(find /Users/markusalehtisalo/Downloads/playground/src/app/aiven/ui-wizard -type f -name *.tsx -o -name *.ts -o -name *.css)",
+      "Bash(grep -r \"NEXT_PUBLIC\\\\|ANTHROPIC\\\\|SANITY\" /Users/markusalehtisalo/Downloads/playground/src --include=*.ts --include=*.tsx)",
+      "Bash(git -C /Users/markusalehtisalo/Downloads/playground status --short)",
+      "Bash(git -C /Users/markusalehtisalo/Downloads/playground log --all --full-history -- \".env*\")",
+      "Bash(git -C /Users/markusalehtisalo/Downloads/playground check-ignore -v .env.local)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/markusalehtisalo/Downloads/playground/src/app/aiven/resource-center/[slug]",
+      "/Users/markusalehtisalo/Downloads"
+    ]
+  }
+}
